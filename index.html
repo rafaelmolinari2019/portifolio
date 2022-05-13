@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt">
+<!--CONFIGURAÇÕES E NOME QUE CONSTA NA ABA DO NAVEGADOR-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
+
+    <!--EXECUSÃO DO JAVASCRIPT DA PÁGINA-->
+    <script>
+        function enviardados() {
+            if (document.dados.nome.value == "" || document.dados.nome.value.length < 8) {
+                alert("Preencha o campo Nome corretamente!");
+                document.dados.nome.focus();
+                return false;
+            }
+            if (document.dados.email.value == "" || document.dados.email.value.length < 8) {
+                alert("Preencha o campo Nome corretamente!");
+                document.dados.email.focus();
+                return false;
+            }
+            if (document.dados.mensagem.value == "" || document.dados.mensagem.value.length < 4) {
+                alert("Preencha o campo Nome corretamente!");
+                document.dados.mensagem.focus();
+                return false;
+            }
+            alert("Enviado com sucesso!");
+
+            return true;
+        }
+    </script>
+    <!--EXECUSÃO DO JAVASCRIPT DA PÁGINA-->
+
+    <title>Minha Página Web</title>
+</head>
+<!--CONFIGURAÇÕES E NOME QUE CONSTA NA ABA DO NAVEGADOR-->
+<!--CORPO DA PAGINA, IMAGENS E TEXTO-->
+
+<body>
+    <header>
+        <p class="titulo">Meu Site Pessoal</p>
+    </header>
+
+    <div class="art"><br><br>
+
+        <h1>LOREM IPSUM, TITULO TESTE</h1><br><br>
+
+        <div class="texto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas varius lorem in rhoncus. Integer varius volutpat orci. Vivamus consequat bibendum venenatis. Donec eget est purus. Ut rutrum mauris vel justo pretium, et lacinia augue finibus. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ac ipsum eros. Nam molestie tincidunt scelerisque. Curabitur ac lacus quis risus commodo interdum id et diam. Donec id feugiat purus. Aenean
+            libero nisi, efficitur sed urna et, maximus porttitor lorem. Nam bibendum volutpat quam vitae placerat.
+        </div><br>
+
+        <img class="imagem" src="imagem/code.jpg"><br>
+
+        <div class="texto2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat lorem, interdum iaculis dui a, lacinia efficitur arcu. Nam quis lacus at nibh ultrices vestibulum. Etiam erat tellus, mollis fermentum lacus sed, interdum eleifend turpis. Ut sollicitudin
+            maximus metus, eget tristique augue viverra sit amet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam in sapien mi. Phasellus nec gravida nulla. Phasellus feugiat pellentesque augue, nec mattis arcu ornare eget. Vestibulum
+            dapibus, elit eget iaculis tincidunt, tellus libero aliquam dui, ac scelerisque ante sem sed libero. Proin ornare sapien metus. Aliquam feugiat, lectus ac consectetur dapibus, quam mauris congue lacus, eu iaculis orci ipsum ornare leo. Maecenas
+            ornare dolor in placerat pretium.
+        </div><br>
+
+        <img id="imagem2" src="imagem/laptop.jpg"><br>
+
+        <div class="texto3">Phasellus sapien erat, interdum at neque sed, commodo condimentum eros. Donec nec eros est. Phasellus eget enim id libero maximus condimentum. Duis consectetur libero eu metus condimentum egestas. Integer semper mattis metus sed faucibus. Cras
+            dapibus faucibus suscipit. Mauris id tristique justo. Curabitur eget blandit arcu, id posuere justo. Aenean blandit lacus orci, vitae aliquet enim rutrum ac. Aenean viverra magna ac egestas tincidunt. Cras aliquet tellus magna, eget maximus
+            magna congue eu.
+        </div><br><br>
+    </div>
+    <!--CORPO DA PAGINA, IMAGENS E TEXTO-->
+    <!--FORMULÁRIO DA PÁGINA(UTILIANDO O CSS DO BULMA NO FORMULÁRIO)-->
+
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-half">
+
+                <form action="" method="POST" id="formulario" name="dados" onsubmit="return enviardados();">
+
+                    <div class="field "><br><br>
+                        <label class="label">Nome *</label>
+                        <div class="control">
+                            <input required name="nome" class="input " type="text" id="nome" placeholder="Seu nome ">
+                        </div>
+                    </div>
+
+                    <div class="field ">
+                        <label class="label ">Email *</label>
+                        <div class="control ">
+                            <input required name="email " class="input " type="email " id="email" placeholder="Seu email ">
+                        </div>
+                    </div>
+
+                    <div class="field ">
+                        <label class="label ">Mensagem *</label>
+                        <div class="control ">
+                            <textarea required name="mensagem " class="textarea " id="mensagem" placeholder="Deixe sua mensagem " maxlength="2000 "></textarea>
+                        </div>
+                    </div>
+
+                    <div class="field is-grouped ">
+                        <div class="control ">
+                            <button class="button is-link is-small" type="submit" onclick="funcao()">Enviar</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--FORMULÁRIO DA PÁGINA(UTILIANDO O CSS DO BULMA NO FORMULÁRIO)-->
+    <!--RODAPÉ DA PAGINA, REDES SOCIAIS E DESENVOLVEDOR DA PÁGINA-->
+    <footer class="fot2 ">
+        <a href="https://www.facebook.com/rafael.franciscodasilva.7 "><img src="imagem/facebook.png " alt=" " width="30px " height="30px "></a>
+        <a href="https://twitter.com/rafasmolinari "><img src="imagem/twitter.png " alt=" " width="30px " height="30px "></a>
+        <a href="https://www.instagram.com/RafaelMolinari82/ "><img src="imagem/instagram.png " alt=" " width="30px " height="30px "></a>
+        <a href="https://www.twitch.tv/rafamolinari82 "><img src="imagem/twitch.png " alt=" " width="30px " height="30px "></a>
+        <br>
+        <br>
+        <p class="final">Produzido por SM Serviços e Tecnologia, 2022.</p>
+    </footer>
+    <!--RODAPÉ DA PAGINA, REDES SOCIAIS E DESENVOLVEDOR DA PÁGINA-->
+</body>
+
+</html>
